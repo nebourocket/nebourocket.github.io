@@ -263,6 +263,35 @@ a.link-card:hover{border-color:rgba(56,225,255,.55);transform:translateY(-1px)}
 .icon.t{color:var(--teal);background:rgba(45,212,191,.09)}
 .link-card b{display:block;font-size:16px;line-height:1.4}
 .link-card .desc{font-size:13px;color:var(--muted);word-break:break-word;line-height:1.6;display:block}
+/* updates */
+.checked{display:inline-flex;align-items:center;gap:9px;border:1px solid rgba(45,212,191,.4);background:rgba(45,212,191,.08);color:#8ff5e4;padding:7px 13px;border-radius:999px;font-family:"JetBrains Mono",monospace;font-size:11.5px;letter-spacing:.08em;font-weight:600;margin-bottom:20px}
+.checked i{width:7px;height:7px;background:var(--teal);border-radius:50%;display:inline-block;box-shadow:0 0 10px var(--teal)}
+.upd-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:760px){.upd-grid{grid-template-columns:1fr}}
+.upd-card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:24px;backdrop-filter:blur(10px);position:relative;overflow:hidden}
+.upd-card::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--cyan),transparent 60%);opacity:.75}
+.upd-card.c-teal::before{background:linear-gradient(90deg,var(--teal),transparent 60%)}
+.upd-card.c-violet::before{background:linear-gradient(90deg,var(--violet),transparent 60%)}
+.upd-card.c-amber::before{background:linear-gradient(90deg,var(--amber),transparent 60%)}
+.upd-top{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:6px}
+.upd-cat{font-family:"JetBrains Mono",monospace;font-size:12px;letter-spacing:.12em;font-weight:600;color:var(--cyan)}
+.upd-card.c-teal .upd-cat{color:var(--teal)}
+.upd-card.c-violet .upd-cat{color:var(--violet)}
+.upd-card.c-amber .upd-cat{color:var(--amber)}
+.upd-count{font-family:"JetBrains Mono",monospace;font-size:10.5px;letter-spacing:.06em;color:var(--muted2);border:1px solid var(--line);padding:3px 8px;border-radius:999px}
+.upd-card h3{margin:0 0 4px;font-size:18px;line-height:1.55}
+.upd-item{border-top:1px solid var(--line);padding:13px 0 2px;margin-top:13px}
+.upd-date{font-family:"JetBrains Mono",monospace;font-size:11.5px;letter-spacing:.08em;color:var(--cyan);font-weight:600}
+.upd-card.c-teal .upd-date{color:var(--teal)}
+.upd-card.c-violet .upd-date{color:var(--violet)}
+.upd-card.c-amber .upd-date{color:var(--amber)}
+.upd-item h4{margin:4px 0 4px;font-size:15px;line-height:1.6;font-weight:600}
+.upd-item h4 a{text-decoration:none}
+.upd-item h4 a:hover{color:var(--cyan);text-decoration:underline;text-underline-offset:3px}
+.upd-item p{margin:0;color:var(--muted);font-size:13.5px;line-height:1.8}
+.upd-more{display:inline-flex;align-items:center;gap:7px;margin-top:16px;text-decoration:none;font-weight:700;font-size:13.5px;color:var(--cyan)}
+.upd-more:hover{text-decoration:underline;text-underline-offset:3px}
+
 footer{border-top:1px solid var(--line);padding:30px 0 42px;color:var(--muted2);font-size:13.5px;margin-top:56px;position:relative;z-index:2;background:rgba(5,8,22,.7);backdrop-filter:blur(8px)}
 .foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .foot .mono{font-family:"JetBrains Mono",monospace;font-size:12px;letter-spacing:.06em}
@@ -278,7 +307,7 @@ footer{border-top:1px solid var(--line);padding:30px 0 42px;color:var(--muted2);
 <a class="logo" href="#top"><span class="logo-mark">🚀</span><span><span data-i18n="logoName">Nebourocket</span> <em>//</em> <span style="color:var(--muted);font-size:12px;letter-spacing:.18em">ORBIT</span></span></a>
 <div class="top-right">
 <nav class="nav" aria-label="Page sections">
-<a href="#station" data-open="about" data-i18n="navAbout">About</a><a href="#station" data-open="research" data-i18n="navSkills">Research</a><a href="#station" data-open="history" data-i18n="navHistory">Works</a><a href="#station" data-open="articles" data-i18n="navArticles">Articles</a><a href="#station" data-open="links" data-i18n="navLinks">Links</a>
+<a href="#station" data-open="about" data-i18n="navAbout">About</a><a href="#station" data-open="research" data-i18n="navSkills">Research</a><a href="#station" data-open="history" data-i18n="navHistory">Works</a><a href="#station" data-open="articles" data-i18n="navArticles">Articles</a><a href="#updates" data-i18n="navUpdates">Updates</a><a href="#station" data-open="links" data-i18n="navLinks">Links</a>
 </nav>
 <div class="lang-toggle" role="group" aria-label="Language / 言語">
 <button type="button" id="btn-en" aria-pressed="true">EN</button>
@@ -623,6 +652,53 @@ footer{border-top:1px solid var(--line);padding:30px 0 42px;color:var(--muted2);
 
 </div>
 </section>
+
+<!-- UPDATES -->
+<section id="updates">
+<div class="section-head"><span class="no">02</span><h2 data-i18n="updH">Updates</h2><p>Articles · Apps · Projects · AI</p></div>
+<p class="station-lead" data-i18n="updLead">Everything new, in one place — the latest articles I've written, the apps I've built, the projects I'm part of, and what I'm doing with AI. This page is where all of it collects, and I check it <strong>once a week</strong> to keep it current.</p>
+<span class="checked"><i></i> <span data-i18n="updChecked">LAST CHECKED · 12 NOV 2026 — REVIEWED WEEKLY</span></span>
+
+<div class="upd-grid">
+
+<article class="upd-card c-teal">
+<div class="upd-top"><span class="upd-cat">WRITING / NOTE</span><span class="upd-count">DAILY</span></div>
+<h3 data-i18n="updAT">Articles — latest writing</h3>
+<div class="upd-item"><span class="upd-date" data-i18n="updA1d">EVERY MORNING · ONGOING</span><h4><a href="https://note.com/nebourocket/n/n8189ee55b906" target="_blank" rel="noopener" data-i18n="updA1t">“Daily News” series — a new edition every morning</a></h4><p data-i18n="updA1p">Around 30 items each morning from natural science, AI, psychology and economics, plus papers and in-depth blogs. The November 5 edition is linked here; new editions appear on note daily.</p></div>
+<div class="upd-item"><span class="upd-date">NOV 2026</span><h4><a href="https://note.com/nebourocket/n/n1c729749b48c" target="_blank" rel="noopener" data-i18n="updA2t">Four AI assistants launched at once, so I compared them thoroughly</a></h4><p data-i18n="updA2p">A hands-on comparison of Claude Duet, dots, Muse and Grok Bot — a paid article on note.</p></div>
+<div class="upd-item"><span class="upd-date">NOV 2026</span><h4><a href="https://note.com/nebourocket/n/n577b7eefb0a6" target="_blank" rel="noopener" data-i18n="updA3t">Paper reading: the “validity of representation” in multimodal LLMs</a></h4><p data-i18n="updA3p">Why showing a video as-is isn't always right — my reading of a multimodal LLM paper, in my own words.</p></div>
+<div class="upd-item"><span class="upd-date" data-i18n="updA4d">WEEKLY · MEMBERS ONLY</span><h4><a href="https://note.com/nebourocket/membership" target="_blank" rel="noopener" data-i18n="updA4t">Members-only articles, 2–3 times a week</a></h4><p data-i18n="updA4p">The note membership “Nebourocket's Creative Room” (¥500/month) gets behind-the-scenes research notes, Kindle book previews and development reports.</p></div>
+<a class="upd-more" href="https://note.com/nebourocket" target="_blank" rel="noopener" data-i18n="updAmore">All articles on note →</a>
+</article>
+
+<article class="upd-card">
+<div class="upd-top"><span class="upd-cat">APPS / BUILT &amp; RUNNING</span><span class="upd-count">2 APPS</span></div>
+<h3 data-i18n="updBT">Apps — what I've built</h3>
+<div class="upd-item"><span class="upd-date" data-i18n="updB1d">NOV 2026 · NEW</span><h4><a href="https://nebourocket.github.io/exercise-search/" target="_blank" rel="noopener" data-i18n="updB1t">Exercise Search — launched</a></h4><p data-i18n="updB1p">Search 1,781 exercises by name, muscle, equipment or intent, with a body map and three languages. Found exercises log straight into PFC Calculator.</p></div>
+<div class="upd-item"><span class="upd-date" data-i18n="updB2d">NOV 2026 · RENEWED</span><h4><a href="https://nebourocket.github.io/pfc-calculator/" target="_blank" rel="noopener" data-i18n="updB2t">PFC Calculator — renewed, Pro released</a></h4><p data-i18n="updB2p">29,283 packaged products added, Japanese / English / Chinese switching, weight and training logs — and Pro (¥500 one-time) with a 30-day graph, automatic goal calculation, CSV export and a daily score.</p></div>
+<a class="upd-more" href="https://github.com/nebourocket" target="_blank" rel="noopener" data-i18n="updBmore">All projects on GitHub →</a>
+</article>
+
+<article class="upd-card c-violet">
+<div class="upd-top"><span class="upd-cat">PROJECTS / RESEARCH</span><span class="upd-count" data-i18n="updCcount">ONGOING</span></div>
+<h3 data-i18n="updCT">Projects — what I'm part of</h3>
+<div class="upd-item"><span class="upd-date" data-i18n="updC1d">NOV 2026</span><h4 data-i18n="updC1t">Presented my master's research</h4><p data-i18n="updC1p">I presented my human–dog interaction analysis research at a regular research meeting.</p></div>
+<div class="upd-item"><span class="upd-date" data-i18n="updC2d">ONGOING</span><h4 data-i18n="updC2t">Human–dog interaction analysis — annotation in progress</h4><p data-i18n="updC2p">Annotating videos of people and dogs in ELAN, marking the moments where attention turns toward the other's actions. Clustering and state-transition analysis come next.</p></div>
+<div class="upd-item"><span class="upd-date" data-i18n="updC3d">IN PROGRESS</span><h4 data-i18n="updC3t">Kindle book for undergraduates unsure about graduate school</h4><p data-i18n="updC3p">Chapter 1 is complete and writing continues, with progress shared early in the note membership.</p></div>
+<a class="upd-more" href="#station" data-open="research" data-i18n="updCmore">More about the research →</a>
+</article>
+
+<article class="upd-card c-amber">
+<div class="upd-top"><span class="upd-cat">AI / MODELS &amp; TOOLS</span><span class="upd-count" data-i18n="updDcount">ONGOING</span></div>
+<h3 data-i18n="updDT">AI — what I'm working on</h3>
+<div class="upd-item"><span class="upd-date" data-i18n="updD1d">ONGOING</span><h4><a href="https://huggingface.co/LoNebula" target="_blank" rel="noopener" data-i18n="updD1t">Hugging Face — models &amp; AI work</a></h4><p data-i18n="updD1p">My AI work is published on Hugging Face as LoNebula.</p></div>
+<div class="upd-item"><span class="upd-date" data-i18n="updD2d">ONGOING</span><h4 data-i18n="updD2t">My own AI skills &amp; automation</h4><p data-i18n="updD2p">I build and run my own AI skills and automation to systematize everyday recording, news curation and writing — the same workflow behind the Daily News series and this profile.</p></div>
+<div class="upd-item"><span class="upd-date" data-i18n="updD3d">EVERY MORNING</span><h4><a href="https://zenn.dev/lonebula" target="_blank" rel="noopener" data-i18n="updD3t">Tracking AI in Daily News &amp; on Zenn</a></h4><p data-i18n="updD3p">AI is one of the core beats of the morning Daily News (about 7 of the ~30 items), and my technical articles are collected on Zenn.</p></div>
+<a class="upd-more" href="https://huggingface.co/LoNebula" target="_blank" rel="noopener" data-i18n="updDmore">AI work on Hugging Face →</a>
+</article>
+
+</div>
+</section>
 </div>
 </main>
 
@@ -772,6 +848,32 @@ ja: {
   a5cat: "デイリーニュース", a5t: "デイリーニュース（11月5日分）",
   artNote: "noteでは、論文読み・技術解説、デイリーニュース、日常の記事を更新しています。Kindle本への導線として、大学院や研究にまつわる記事も書いています。",
   linksH: "リンク",
+  navUpdates: "更新情報",
+  updH: "更新情報",
+  updLead: "新しいものを、ここに集めます。書いた記事、作ったアプリ、関わっているプロジェクト、そしてAIまわりの取り組みです。このページにすべて集約し、<strong>週に一度</strong>確認して更新しています。",
+  updChecked: "最終確認 · 2026年11月12日 — 毎週確認しています",
+  updAT: "記事 — 最近書いたもの",
+  updA1d: "毎朝 · 連載中", updA1t: "「デイリーニュース」— 毎朝、新しい号を公開", updA1p: "毎朝、自然科学・AI・心理学・経済などから約30件と、論文や読み応えのあるブログを選んで届けています。ここには11月5日分をリンクしました。新しい号はnoteで毎日公開しています。",
+  updA2t: "AI秘書が一気に4つ出たので、徹底比較してみました", updA2p: "Claude Duet、dots、Muse、Grok Botを実際に比べて書きました。noteの有料記事です。",
+  updA3t: "論文読み：マルチモーダルLLMの『表現の妥当性』を検証した論文", updA3p: "動画をそのまま見せるのが正解とは限らない。マルチモーダルLLMの論文を、自分の言葉で読み解きました。",
+  updA4d: "週2〜3本 · メンバー限定", updA4t: "メンバー限定記事を週2〜3本投稿", updA4p: "noteメンバーシップ「寝坊ロケットの創作室」（月額500円）で、研究の裏側、Kindle本の進捗の先行公開、開発レポートを書いています。",
+  updAmore: "noteの記事をすべて見る →",
+  updBT: "アプリ — 作ったもの",
+  updB1d: "2026年11月 · 新作", updB1t: "筋トレ種目サーチ — 公開", updB1p: "1,781種目を名前・部位・器具や「鍛えたい部位」の言葉で探せます。ボディマップと3言語対応があり、見つけた種目はPFC計算ツールにそのまま記録できます。",
+  updB2d: "2026年11月 · リニューアル", updB2t: "PFCかんたん計算ツール — リニューアル＆Pro開始", updB2p: "市販品29,283品の追加、日本語・英語・中国語の切り替え、体重・筋トレ記録を追加。そしてPro（買い切り500円）には30日グラフ、目標の自動計算、CSV書き出し、1日のスコアが入りました。",
+  updBmore: "GitHubのプロジェクトをすべて見る →",
+  updCcount: "進行中",
+  updCT: "プロジェクト — 関わっているもの",
+  updC1d: "2026年11月", updC1t: "修士課程の研究を発表しました", updC1p: "人間と犬のインタラクション解析の研究について、定期ミーティングで発表しました。",
+  updC2d: "進行中", updC2t: "人間と犬のインタラクション解析 — アノテーション進行中", updC2p: "ELANで犬と人の関わりの動画にアノテーションし、相手の行動に注意が向いた場面に印をつけています。次はクラスタリングと状態遷移の分析です。",
+  updC3d: "執筆中", updC3t: "Kindle本『大学院進学を迷っている大学4年生へ』", updC3p: "第1章が完成し、執筆を続けています。進捗はnoteメンバーシップで先に共有しています。",
+  updCmore: "研究について詳しく →",
+  updDcount: "進行中",
+  updDT: "AI — 取り組んでいること",
+  updD1d: "進行中", updD1t: "Hugging Face — モデルとAIの取り組み", updD1p: "AI関連の取り組みは、Hugging Face（LoNebula）で公開しています。",
+  updD2d: "進行中", updD2t: "自作のAIスキルと自動化", updD2p: "毎日の記録、ニュースの選定、執筆を仕組み化するために、自作のAIスキルや自動化を運用しています。デイリーニュースやこのプロフィールも、その仕組みの上で回っています。",
+  updD3d: "毎朝", updD3t: "デイリーニュースとZennでAIを追う", updD3p: "AIは毎朝のデイリーニュースの中心テーマのひとつで（約30件中7件ほど）、技術記事はZennにまとめています。",
+  updDmore: "Hugging FaceのAIの取り組み →",
   lPfcT: "PFCかんたん計算ツール", lPfc: "nebourocket.github.io/pfc-calculator — 無料のカロリー・PFC計算、Proあり",
   lExT: "筋トレ種目サーチ", lEx: "nebourocket.github.io/exercise-search — 1,700種目以上を部位・器具で検索",
   l1: "note.com/nebourocket — 記事とデイリーニュース",
