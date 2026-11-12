@@ -193,6 +193,32 @@ section{padding:56px 0 8px}
 .skill h3{margin:0 0 8px;font-size:17.5px;line-height:1.55}
 .skill p{margin:0;color:var(--muted);font-size:14.5px;line-height:1.85}
 .skill.wide{grid-column:1/-1}
+.apps-head{margin:28px 0 6px}
+.apps-head h3{font-family:"Orbitron",sans-serif;font-size:20px;margin:0;letter-spacing:.04em}
+.apps-head p{color:var(--muted);font-size:14.5px;margin:6px 0 0;line-height:1.85}
+.app-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
+@media(max-width:760px){.app-grid{grid-template-columns:1fr}}
+.app-card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:24px;backdrop-filter:blur(10px);position:relative;overflow:hidden}
+.app-card::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--teal),transparent 60%);opacity:.8}
+.app-card.ex::before{background:linear-gradient(90deg,var(--violet),transparent 60%)}
+.app-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;gap:10px;flex-wrap:wrap}
+.app-num{font-family:"JetBrains Mono",monospace;font-size:12px;color:var(--cyan);letter-spacing:.1em;font-weight:600}
+.app-card.ex .app-num{color:var(--violet)}
+.app-badge{font-family:"JetBrains Mono",monospace;font-size:10.5px;letter-spacing:.06em;color:var(--muted2);border:1px solid var(--line);padding:3px 8px;border-radius:999px}
+.app-badge.pro{color:#231400;background:var(--amber);border-color:var(--amber);font-weight:700;font-family:"Noto Sans JP",sans-serif}
+.app-card h3{margin:0 0 8px;font-size:18px;line-height:1.55}
+.app-card p{margin:0;color:var(--muted);font-size:14.5px;line-height:1.85}
+.app-card p+p{margin-top:10px}
+.app-card strong{color:#8ff5e4}
+.app-list{margin:10px 0 0;padding-left:1.25em;color:var(--muted);font-size:14px;line-height:1.85}
+.app-list li::marker{color:var(--cyan)}
+.app-card.ex .app-list li::marker{color:var(--violet)}
+.app-list strong{color:var(--text)}
+.app-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.app-btn{display:inline-flex;align-items:center;gap:7px;text-decoration:none;font-weight:700;font-size:13.5px;padding:9px 15px;border-radius:999px;border:1px solid var(--line2);background:rgba(12,18,42,.7);transition:.18s}
+.app-btn.primary{background:var(--cyan);color:#04121a;border-color:var(--cyan)}
+.app-btn:hover{border-color:var(--cyan);color:var(--cyan);transform:translateY(-1px)}
+.app-btn.primary:hover{background:#7ceeff;color:#04121a}
 
 /* pipeline */
 .pipeline{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line);border-radius:20px;overflow:hidden;background:var(--surface);backdrop-filter:blur(10px)}
@@ -273,7 +299,7 @@ footer{border-top:1px solid var(--line);padding:30px 0 42px;color:var(--muted2);
 <span class="status"><i></i> <span data-i18n="handle">SIGNAL · @nebourocket — ONLINE</span></span>
 <h1><span data-i18n="h1">NEBOUROCKET</span><span class="thin" data-i18n="h1sub">寝坊ロケット · SPACE × AI × DOGS</span></h1>
 <p class="lead" data-i18n="lead">Decoding the bond between humans and dogs with data. A minimalist engineer in a master's program, researching <strong>human–dog interaction analysis</strong>.</p>
-<p class="sub" data-i18n="sub">I annotate videos of people and dogs, cluster their behavior, and trace how their states shift over time — then turn what I learn into writing, tools, and a Kindle book for undergraduates unsure about graduate school.</p>
+<p class="sub" data-i18n="sub">I annotate videos of people and dogs, cluster their behavior, and trace how their states shift over time — then turn what I learn into writing, tools, and a Kindle book for undergraduates unsure about graduate school. I also build and run two free web apps: the PFC Calculator and Exercise Search.</p>
 <div class="meta-row">
 <span class="meta">🐕 <b data-i18n="meta1">Human–dog interaction analysis</b></span>
 <span class="meta">🧠 <b data-i18n="meta2">AI · Clustering · State transitions</b></span>
@@ -497,6 +523,7 @@ footer{border-top:1px solid var(--line);padding:30px 0 42px;color:var(--muted2);
 <div><dt data-i18n="fact2t">Research</dt><dd data-i18n="fact2d">Human–dog interaction analysis<br><span>Annotation of human–dog interaction videos, clustering, state-transition analysis</span></dd></div>
 <div><dt data-i18n="fact3t">Writing</dt><dd data-i18n="fact3d">note <span>— paper reading, tech explainers, daily essays, and the Daily News series</span></dd></div>
 <div><dt data-i18n="fact4t">Book</dt><dd data-i18n="fact4d">Kindle book in progress <span>— Chapter 1 complete</span></dd></div>
+<div><dt data-i18n="fact5t">Apps</dt><dd data-i18n="fact5d">PFC Calculator <span>— calories &amp; PFC, with Pro (¥500 one-time)</span><br>Exercise Search <span>— 1,700+ exercises, linked with PFC Calculator</span></dd></div>
 </dl>
 </aside>
 </div>
@@ -520,15 +547,45 @@ footer{border-top:1px solid var(--line);padding:30px 0 42px;color:var(--muted2);
 <article class="module-panel" id="panel-skills">
 <div class="panel-head"><span class="panel-tag">MODULE 03 · SOLAR ARRAY</span><h2 data-i18n="doH">What I Do</h2><span class="hint">Power / Output</span></div>
 <div class="skill-grid">
-<article class="skill"><div class="skill-top"><span class="skill-num">CODE / 03</span><span class="skill-tag">GITHUB</span></div><h3 data-i18n="sk3t">Programming &amp; tool building</h3><p data-i18n="sk3d">Active on GitHub as nebourocket. I build and run my own AI skills and automation to systematize everyday recording and work.</p></article>
+<article class="skill"><div class="skill-top"><span class="skill-num">CODE / 03</span><span class="skill-tag">GITHUB</span></div><h3 data-i18n="sk3t">Programming &amp; tool building</h3><p data-i18n="sk3d">Active on GitHub as nebourocket. I build free web apps with plain HTML, CSS and JavaScript on GitHub Pages — including payment and licensing with Stripe and Cloudflare Workers — and run my own AI skills and automation to systematize everyday recording and work.</p></article>
 <article class="skill"><div class="skill-top"><span class="skill-num">WRITE / 04</span><span class="skill-tag">ARXIV</span></div><h3 data-i18n="sk4t">Technical writing</h3><p data-i18n="sk4d">Explainers of arXiv papers and careful readings of technical books — restating difficult material in my own words so it actually lands.</p></article>
 <article class="skill wide"><div class="skill-top"><span class="skill-num">PUBLISH / 05</span><span class="skill-tag">DAILY</span></div><h3 data-i18n="sk5t">Writing &amp; publishing</h3><p data-i18n="sk5d">A Kindle book in progress and daily posts on note, Threads, and Instagram — research, reading, training, and everyday life, in a gentle voice.</p></article>
+</div>
+<div class="apps-head"><h3 data-i18n="appsH">My Apps — free to use, no sign-up</h3><p data-i18n="appsLead">Two web apps I built and run myself. Both open in the browser, work on a phone like an app, and keep your records only on your own device.</p></div>
+<div class="app-grid">
+<article class="app-card">
+<div class="app-top"><span class="app-num">APP / 01</span><span class="app-badge pro" data-i18n="pfcBadge">Pro ¥500 one-time</span></div>
+<h3 data-i18n="pfcT">PFC Calculator — PFCかんたん計算ツール</h3>
+<p data-i18n="pfcD">Pick a food, enter the grams, and today's calories and PFC (protein, fat, carbs) are totaled instantly, with progress bars against your daily goals. Records stay in your browser's localStorage only — nothing is sent to a server.</p>
+<ul class="app-list">
+<li data-i18n="pfcF1"><strong>All the data:</strong> all 2,537 foods from Japan's Standard Tables of Food Composition (2023 supplement), plus 29,283 packaged products from Open Food Facts — searchable in everyday words.</li>
+<li data-i18n="pfcF2"><strong>Free basics:</strong> calorie &amp; PFC totals and goal bars, weight log (7-day average, 30-day graph), training log with estimated 1RM and personal-best notices, recent-foods shortcuts, and backup export / import.</li>
+<li data-i18n="pfcF3"><strong>Three languages:</strong> Japanese, English and Simplified Chinese, switchable in one tap.</li>
+</ul>
+<p data-i18n="pfcProD"><strong>Pro — ¥500, one-time (no subscription):</strong> 30-day calorie graph with goal line; automatic goal calculation from sex, age, height, weight, activity and purpose; <strong>your personal required calories</strong>, reverse-calculated from your own intake and weight trend toward a target weight and deadline (with different targets for training and rest days); up to 200 custom foods (free: 5); reusable meal sets; CSV export; weekly sets per muscle group; and a 100-point daily score with streaks and best records. Payment is handled by Stripe — card details never reach the app — and Pro unlocks with a signed license key; the note membership code also works.</p>
+<div class="app-links"><a class="app-btn primary" href="https://nebourocket.github.io/pfc-calculator/" target="_blank" rel="noopener" data-i18n="tryApp">Try the app →</a><a class="app-btn" href="https://github.com/nebourocket/pfc-calculator" target="_blank" rel="noopener" data-i18n="viewGh">GitHub →</a></div>
+</article>
+<article class="app-card ex">
+<div class="app-top"><span class="app-num">APP / 02</span><span class="app-badge" data-i18n="exBadge">FREE · OPEN DATA</span></div>
+<h3 data-i18n="exT">Exercise Search — 筋トレ種目サーチ</h3>
+<p data-i18n="exD">Search <strong>1,700+ exercises</strong> (1,781 in total) — barbell, dumbbell, bodyweight, cable, machine, kettlebell, stretching and more — by name, body part, equipment, or just by saying what you want to train, like “I want to train my back” or “abs at home.”</p>
+<ul class="app-list">
+<li data-i18n="exF1"><strong>Body map:</strong> tap a muscle on the front / back figure to filter; each exercise shows its primary and secondary muscles on the figure.</li>
+<li data-i18n="exF2"><strong>Three languages:</strong> UI, names and instructions in English, Japanese and Simplified Chinese, with filters for muscle, equipment, type, level, force and mechanic.</li>
+<li data-i18n="exF3"><strong>Details &amp; sharing:</strong> images, step-by-step instructions and detailed guides, shareable URLs, light / dark theme.</li>
+<li data-i18n="exF4"><strong>Logs straight into PFC Calculator:</strong> “Log in PFC Calculator” opens the PFC app with the exercise name and muscle group already filled in.</li>
+</ul>
+<p data-i18n="exD2">Built as a static site with vanilla JavaScript on open data from free-exercise-db and wger. Free, no sign-up, no tracking.</p>
+<div class="app-links"><a class="app-btn primary" href="https://nebourocket.github.io/exercise-search/" target="_blank" rel="noopener" data-i18n="tryApp2">Try the app →</a><a class="app-btn" href="https://github.com/nebourocket/exercise-search" target="_blank" rel="noopener" data-i18n="viewGh2">GitHub →</a></div>
+</article>
 </div>
 </article>
 
 <article class="module-panel" id="panel-history">
 <div class="panel-head"><span class="panel-tag">MODULE 04 · CUPOLA</span><h2 data-i18n="histH">Works &amp; timeline</h2><span class="hint">Flight Log</span></div>
 <div class="timeline">
+<div class="tl-item"><div class="tl-date" data-i18n="tlPfcDate">Nov 2026 — Renewed</div><h3 data-i18n="tlPfcT">PFC Calculator — renewed, with Pro</h3><p data-i18n="tlPfcD">My free calorie &amp; PFC calculator was renewed: 29,283 packaged products added, Japanese / English / Chinese switching, weight and training logs, and a one-time ¥500 Pro (30-day graph, automatic and personal-calorie goal calculation, CSV export, daily score &amp; streaks) sold via Stripe with signed license keys.</p></div>
+<div class="tl-item"><div class="tl-date" data-i18n="tlExDate">Nov 2026 — New</div><h3 data-i18n="tlExT">Exercise Search — launched</h3><p data-i18n="tlExD">A new free app to search 1,700+ exercises by name, muscle, equipment or intent, with a body map and three languages. It links into PFC Calculator so a found exercise can be logged in one tap.</p></div>
 <div class="tl-item"><div class="tl-date" data-i18n="tl1date">Nov 2026</div><h3 data-i18n="tl1t">Presented my research</h3><p data-i18n="tl1d">I presented my master's research at a regular research meeting.</p></div>
 <div class="tl-item"><div class="tl-date" data-i18n="tl2date">2026 — Present</div><h3 data-i18n="tl2t">“Daily News” series on note, every morning</h3><p data-i18n="tl2d">Each morning I select around 30 items from natural science, AI, psychology, and economics, alongside a paper-reading series.</p></div>
 <div class="tl-item"><div class="tl-date" data-i18n="tl3date">In progress</div><h3 data-i18n="tl3t">Kindle book for undergraduates unsure about graduate school</h3><p data-i18n="tl3d">Chapter 1 is complete and I'm still writing. A book for undergraduates who are wondering whether graduate school is right for them.</p></div>
@@ -550,6 +607,8 @@ footer{border-top:1px solid var(--line);padding:30px 0 42px;color:var(--muted2);
 <article class="module-panel" id="panel-links">
 <div class="panel-head"><span class="panel-tag">MODULE 06 · DOCKING PORT</span><h2 data-i18n="linksH">Links</h2><span class="hint">Constellation / All Channels</span></div>
 <div class="link-grid">
+<a class="link-card" href="https://nebourocket.github.io/pfc-calculator/" target="_blank" rel="noopener"><span class="icon t">PFC</span><span><b data-i18n="lPfcT">PFC Calculator</b><span class="desc" data-i18n="lPfc">nebourocket.github.io/pfc-calculator — free calorie &amp; PFC calculator, Pro available</span></span></a>
+<a class="link-card" href="https://nebourocket.github.io/exercise-search/" target="_blank" rel="noopener"><span class="icon v">EX</span><span><b data-i18n="lExT">Exercise Search</b><span class="desc" data-i18n="lEx">nebourocket.github.io/exercise-search — search 1,700+ exercises</span></span></a>
 <a class="link-card" href="https://note.com/nebourocket" target="_blank" rel="noopener"><span class="icon">n</span><span><b>note</b><span class="desc" data-i18n="l1">note.com/nebourocket — articles and Daily News</span></span></a>
 <a class="link-card" href="https://github.com/nebourocket" target="_blank" rel="noopener"><span class="icon v">G</span><span><b>GitHub</b><span class="desc" data-i18n="l2">github.com/nebourocket — code and projects</span></span></a>
 <a class="link-card" href="https://www.youtube.com/@nebourocket" target="_blank" rel="noopener"><span class="icon p">▶</span><span><b>YouTube</b><span class="desc" data-i18n="lYoutube">youtube.com/@nebourocket — videos</span></span></a>
@@ -646,7 +705,7 @@ ja: {
   h1: "寝坊ロケット",
   h1sub: "NEBOUROCKET · 宇宙 × AI × 犬",
   lead: "データで、人と犬の絆を読み解く。修士課程で<strong>人間と犬のインタラクション解析</strong>を研究する、ミニマリストエンジニア。",
-  sub: "犬と人の関わりの動画にアノテーションし、行動をクラスタリングして、状態の移り変わりを追っています。学んだことは文章とツールに変えて届け、大学院進学に迷う大学生に向けたKindle本も執筆中です。",
+  sub: "犬と人の関わりの動画にアノテーションし、行動をクラスタリングして、状態の移り変わりを追っています。学んだことは文章とツールに変えて届け、大学院進学に迷う大学生に向けたKindle本も執筆中です。無料Webアプリ「PFCかんたん計算ツール」と「筋トレ種目サーチ」も作って公開しています。",
   meta1: "人間と犬のインタラクション解析", meta2: "AI・クラスタリング・状態遷移", meta3: "note 毎日連載中",
   cta1: "研究を見る ↓", ctaArticle: "代表記事を読む", cta2: "リンク集",
   stat1: "動画アノテーション", stat2: "NOTE・デイリーニュース", stat3: "KINDLE本 — 第1章完成", stat4: "ミニマルな暮らし",
@@ -669,17 +728,39 @@ ja: {
   fact2t: "研究テーマ", fact2d: "人間と犬のインタラクション解析<br><span>犬と人の関わりの動画へのアノテーション、クラスタリング、状態遷移の分析</span>",
   fact3t: "執筆", fact3d: "note <span>— 論文読み、技術解説、日常、デイリーニュース連載</span>",
   fact4t: "著書", fact4d: "Kindle本（執筆中） <span>— 第1章完成</span>",
+  fact5t: "アプリ", fact5d: "PFCかんたん計算ツール <span>— カロリー・PFC計算、Pro（買い切り500円）あり</span><br>筋トレ種目サーチ <span>— 1,700種目以上、PFC計算ツールと連携</span>",
   resH: "研究", doH: "できること",
   sk1t: "人間と犬のインタラクション解析", sk1d: "犬と人が関わる動画を解析し、行動や関わりの変化を読み解く研究です。論文を読み、問いを立て、データで確かめる研究の進め方を実践しています。",
   sk2t: "データアノテーションと分析", sk2d: "ELANを用いた犬と人の関わりの動画へのアノテーション、クラスタリング、状態遷移の分析。犬と人の関わりの中で何が起きているかを、丁寧に読み解きます。",
-  sk3t: "プログラミングとツール開発", sk3d: "GitHub（nebourocket）で活動中。AIスキルや自動化の仕組みを自分で作って運用し、日々の記録や作業を仕組み化しています。",
+  sk3t: "プログラミングとツール開発", sk3d: "GitHub（nebourocket）で活動中。HTML・CSS・JavaScriptだけで動く無料WebアプリをGitHub Pagesで公開し、Stripe決済とCloudflare Workersによるライセンス発行まで実装しています。AIスキルや自動化の仕組みも自分で作って運用しています。",
   sk4t: "技術ライティング", sk4d: "arXiv論文の解説記事、技術書の読解整理。難しい内容を、自分の言葉で分かりやすく伝えることを意識して書いています。",
   sk5t: "執筆と発信", sk5d: "Kindle本の執筆、note・Threads・Instagramでの毎日発信。研究、読書、筋トレのある日常を、柔らかい言葉で届けています。",
+  appsH: "作ったアプリ — 無料・登録不要",
+  appsLead: "自分で作って運用しているWebアプリが2つあります。どちらもブラウザで開いてそのまま使え、スマホではアプリのように使えます。記録はあなたの端末の中だけに残ります。",
+  pfcBadge: "Pro 買い切り500円",
+  pfcT: "PFCかんたん計算ツール",
+  pfcD: "食品を選んでグラム数を入れるだけで、今日のカロリーとPFC（たんぱく質・脂質・炭水化物）がひと目でわかります。1日の目標との達成率バーも表示され、記録はブラウザのlocalStorageだけに保存され、サーバーには送られません。",
+  pfcF1: "<strong>データが全部入り：</strong>文部科学省「日本食品標準成分表（八訂）増補2023年」の全2,537品と、Open Food Factsの市販品29,283品を収録。ふだんの言い方でも探せます。",
+  pfcF2: "<strong>無料の基本機能：</strong>カロリー・PFCの合計と目標バー、体重記録（7日平均・30日グラフ）、筋トレ記録（推定1RM・自己ベスト通知）、最近食べたもののワンタップ追加、バックアップの書き出し・読み込み。",
+  pfcF3: "<strong>3言語対応：</strong>日本語・English・中文（簡体字）をワンタップで切り替えられます。",
+  pfcProD: "<strong>Pro — 買い切り500円（月額なし）：</strong>過去30日間のカロリーグラフ（目標ラインつき）、性別・年齢・身長・体重・活動レベル・目的からの目標自動計算、<strong>あなた専用の必要カロリー</strong>（自分の摂取量と体重の推移から消費カロリーを逆算し、目標体重と期限に合わせて毎日の目標を決める。トレ日・休養日で変える設定も）、自分の食品を200件まで登録（無料版は5件）、よく食べる組み合わせのセット登録、CSV書き出し、部位ごとの週のセット数、1日100点のスコアと連続記録。決済はStripeが扱い、カード情報はアプリに届きません。Proは署名つきライセンスキーで有効化され、noteメンバーシップの利用コードも使えます。",
+  tryApp: "アプリを使う →", viewGh: "GitHub →",
+  exBadge: "無料 · オープンデータ",
+  exT: "筋トレ種目サーチ — Exercise Search",
+  exD: "バーベル・ダンベル・自重・ケーブル・マシン・ケトルベル・ストレッチなど<strong>1,700種目以上（全1,781種目）</strong>を、名前・部位・器具、または「背中を鍛えたい」「家でお腹を鍛えたい」のような言い方で探せる無料アプリです。",
+  exF1: "<strong>ボディマップ：</strong>体の図（前・後）の筋肉をタップして絞り込み。各部位の主動筋・補助筋も図で表示されます。",
+  exF2: "<strong>3言語対応：</strong>画面・名称名・説明文が英語・日本語・中国語（簡体字）に対応。部位・器具・種別・レベル・力の向きなどで絞り込めます。",
+  exF3: "<strong>詳細と共有：</strong>画像つきの手順説明と詳しいガイド、共有できるURL、ライト／ダークテーマに対応しています。",
+  exF4: "<strong>PFC計算ツールへそのまま記録：</strong>「PFC計算ツールに記録」を押すと、部位名と部位が入力された状態でPFCアプリが開きます。",
+  exD2: "free-exercise-dbとwgerのオープンデータを使い、バニラJavaScriptの静的サイトとして作りました。無料・登録不要・トラッキングなしです。",
+  tryApp2: "アプリを使う →", viewGh2: "GitHub →",
   p1t: "観察する", p1d: "人と犬の関わりの動画を、丁寧に観察します。",
   p2t: "アノテーション", p2d: "ELANで行動をコマごとにラベル付けします。",
   p3t: "クラスタリング", p3d: "パターンをまとめ、繰り返し現れる状態を見つけます。",
   p4t: "状態遷移", p4d: "状態の移り変わりを追い、その意味を読み解きます。",
   histH: "やってきたこと",
+  tlPfcDate: "2026年 11月 — リニューアル", tlPfcT: "PFCかんたん計算ツール — リニューアル＆Pro開始", tlPfcD: "無料のカロリー・PFC計算ツールをリニューアルしました。市販品29,283品の追加、日本語・英語・中国語の切り替え、体重・筋トレ記録、そして買い切り500円のPro（30日グラフ、目標の自動計算と自分専用の必要カロリー計算、CSV書き出し、スコアと連続記録）をStripe決済と署名つきライセンスキーで開始しました。",
+  tlExDate: "2026年 11月 — 新作", tlExT: "筋トレ種目サーチ — 公開", tlExD: "1,700種目以上を名前・部位・器具や「鍛えたい部位」の言葉で探せる新作の無料アプリを公開しました。ボディマップと3言語対応があり、見つけた種目はワンタップでPFC計算ツールに記録できます。",
   tl1date: "2026年 11月", tl1t: "研究発表を行いました", tl1d: "修士課程での研究について、定期ミーティングで発表しました。",
   tl2date: "2026年 — 現在", tl2t: "noteで「デイリーニュース」を毎日連載", tl2d: "毎朝、自然科学・AI・心理学・経済などから約30件を選んで届ける連載と、論文読みシリーズを投稿しています。",
   tl3date: "執筆中", tl3t: "Kindle本『大学院進学を迷っている大学4年生へ』", tl3d: "第1章が完成し、現在も執筆を続けています。大学院進学に迷う大学生に向けた一冊です。",
@@ -691,6 +772,8 @@ ja: {
   a5cat: "デイリーニュース", a5t: "デイリーニュース（11月5日分）",
   artNote: "noteでは、論文読み・技術解説、デイリーニュース、日常の記事を更新しています。Kindle本への導線として、大学院や研究にまつわる記事も書いています。",
   linksH: "リンク",
+  lPfcT: "PFCかんたん計算ツール", lPfc: "nebourocket.github.io/pfc-calculator — 無料のカロリー・PFC計算、Proあり",
+  lExT: "筋トレ種目サーチ", lEx: "nebourocket.github.io/exercise-search — 1,700種目以上を部位・器具で検索",
   l1: "note.com/nebourocket — 記事とデイリーニュース",
   l2: "github.com/nebourocket — コードとプロジェクト",
   lYoutube: "youtube.com/@nebourocket — 動画",
