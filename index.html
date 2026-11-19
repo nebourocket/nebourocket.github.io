@@ -105,7 +105,7 @@ p{margin:0 0 12px}
 .year-num{font-family:var(--serif);font-weight:800;font-size:30px;line-height:1.1;color:var(--pen)}
 .year-num.word{font-size:21px;padding-top:6px}
 .year ul{list-style:none;margin:0;padding:0}
-.year li{display:grid;grid-template-columns:4.2em 1fr;gap:14px;padding:6px 0}
+.year li{display:grid;grid-template-columns:4.8em 1fr;gap:14px;padding:6px 0}
 .year time{color:var(--muted);font-size:14px;padding-top:2px;font-variant-numeric:tabular-nums}
 .year li p{margin:0}
 
@@ -117,6 +117,16 @@ p{margin:0 0 12px}
 .steps li::before{content:counter(s);font-family:var(--serif);font-weight:700;color:var(--pen)}
 .steps b{font-weight:700}
 .status{margin-top:14px;padding-left:12px;border-left:2px solid var(--foil);font-size:15px}
+
+.tools{font-size:14.5px;color:var(--muted);margin:18px 0 0}
+.before{margin-top:36px;padding-top:28px;border-top:1px dashed var(--rule);max-width:46em}
+.pubs{margin:0;padding-left:1.1em;font-size:15px;color:var(--muted)}
+.pubs li{margin:4px 0}
+.skills{margin:0}
+.skills div{display:grid;grid-template-columns:11em 1fr;gap:16px;padding:10px 0;border-top:1px solid var(--rule)}
+.skills dt{font-family:var(--serif);font-weight:700}
+.skills dd{margin:0;font-size:15px}
+#research>h3{margin-bottom:18px}
 
 /* made */
 .item{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.35fr);gap:28px;padding:22px 0;border-top:1px solid var(--rule)}
@@ -160,8 +170,8 @@ footer{border-top:3px double var(--rule);padding:22px 0 40px;font-size:14px;colo
   #sat .lbl,#sat .lbl-sub,#sat .lead,#sat .tb-g{display:none}
   .legend{display:flex;flex-wrap:wrap;gap:6px 14px;list-style:none;margin:0;padding:10px 14px 0;font-size:14px}
   .year{grid-template-columns:1fr;gap:6px}
-  .year li{grid-template-columns:4.4em 1fr}
-  .linklist div{grid-template-columns:1fr;gap:0}
+  .year li{grid-template-columns:4.8em 1fr}
+  .linklist div,.skills div{grid-template-columns:1fr;gap:0}
   .nav{order:3;width:100%}
 }
 </style>
@@ -173,7 +183,9 @@ footer{border-top:3px double var(--rule);padding:22px 0 40px;font-size:14px;colo
 <a class="logo" href="#top" data-i18n="logo">Nebourocket</a>
 <nav class="nav" aria-label="Sections">
 <a href="#record" data-i18n="navRecord">Record</a>
+<a href="#work" data-i18n="navWork">Work</a>
 <a href="#research" data-i18n="navResearch">Research</a>
+<a href="#skills" data-i18n="navSkills">Skills</a>
 <a href="#made" data-i18n="navMade">Things I made</a>
 <a href="#writing" data-i18n="navWriting">Writing</a>
 <a href="#now" data-i18n="navNow">Now</a>
@@ -193,12 +205,12 @@ footer{border-top:3px double var(--rule);padding:22px 0 40px;font-size:14px;colo
 <div>
 <h1 data-i18n="h1">Nebourocket</h1>
 <p class="alt-name" data-i18n="altName">寝坊ロケット</p>
-<p class="intro" data-i18n="intro">I'm a master's student. As an undergrad I simulated plasma in a magnetic nozzle for a rocket engine. Now I study how people and dogs interact, from video. On the side I build small web apps and write on note.</p>
+<p class="intro" data-i18n="intro">I'm a master's student at JAIST. As an undergrad I simulated plasma in a magnetic nozzle for a laser-fusion rocket engine. Now, together with Purdue University's vet school, I measure people and dogs at the same time to see how a person's instructions and actions relate to whether a dog solves a task. I also work as a contract ML engineer, build web apps, and write on note.</p>
 <dl class="facts">
-<div><dt data-i18n="fNowT">Now</dt><dd data-i18n="fNowD">Master's program. Human–dog interaction analysis: frame-by-frame labels, clustering, state transitions.</dd></div>
-<div><dt data-i18n="fBeforeT">Before</dt><dd data-i18n="fBeforeD">Bachelor's in aeronautical systems engineering. MHD simulation of a magnetic nozzle; one poster, one English talk.</dd></div>
-<div><dt data-i18n="fMadeT">Made</dt><dd data-i18n="fMadeD">Two web apps, a 122M-parameter language model trained from scratch, a data engineering book (in progress).</dd></div>
-<div><dt data-i18n="fWorkT">Work</dt><dd data-i18n="fWorkD">Data analysis intern since Dec 2024. Contract ML engineer since Nov 2025.</dd></div>
+<div><dt data-i18n="fNowT">Now</dt><dd data-i18n="fNowD">Master's student, Japan Advanced Institute of Science and Technology (JAIST), Social Signal Processing and Multimodal Interaction Lab.</dd></div>
+<div><dt data-i18n="fBeforeT">Before</dt><dd data-i18n="fBeforeD">Kanazawa Institute of Technology, aeronautical systems engineering. President's award every semester, GPA about 3.60. Talk at AJCPP 2025 in English.</dd></div>
+<div><dt data-i18n="fWorkT">Work</dt><dd data-i18n="fWorkD">Contract ML engineer at Lluminai (since Nov 2025). Data science intern at Iroribi (since Dec 2024). 2025 internships at NTT DATA Group, KDDI Agile Development Center, NTT East and more.</dd></div>
+<div><dt data-i18n="fMadeT">Made</dt><dd data-i18n="fMadeD">Two web apps (one sells a Pro plan through Stripe), a 122M-parameter language model trained from scratch, a published data engineering book with the advanced part still in progress.</dd></div>
 </dl>
 </div>
 
@@ -311,7 +323,7 @@ footer{border-top:3px double var(--rule);padding:22px 0 40px;font-size:14px;colo
 <li><time data-i18n="m11">Nov</time><p data-i18n="r26a">Started <a href="https://nebourocket.github.io/data-engineering-book/" target="_blank" rel="noopener">The Data Engineering Book</a>. Basics (16 chapters) free, advanced (12 chapters) ¥500.</p></li>
 <li><time data-i18n="m11">Nov</time><p data-i18n="r26b">Launched <a href="https://nebourocket.github.io/exercise-search/" target="_blank" rel="noopener">Exercise Search</a>: 1,781 exercises, a body map, three languages.</p></li>
 <li><time data-i18n="m11">Nov</time><p data-i18n="r26c">Renewed <a href="https://nebourocket.github.io/pfc-calculator/" target="_blank" rel="noopener">PFC Calculator</a> and started selling Pro (¥500 one-time) with Stripe and signed license keys.</p></li>
-<li><time data-i18n="m11">Nov</time><p data-i18n="r26d">Finished labeling the human–dog videos in ELAN (13 Nov) and presented the research at a lab meeting.</p></li>
+<li><time data-i18n="m11">Nov</time><p data-i18n="r26d">Finished the ELAN behavior annotation for my master's research (13 Nov) and presented the research at a lab meeting.</p></li>
 <li><time data-i18n="m11">Nov</time><p data-i18n="r26e">Daily News on note became 11 themed editions every morning, about 10 items each.</p></li>
 <li><time data-i18n="m10">Oct</time><p data-i18n="r26f">Published <a href="https://huggingface.co/LoNebula/Nebula-1-preview" target="_blank" rel="noopener">Nebula-1-preview</a>, a 122M-parameter Japanese and English model trained from scratch on about 2B tokens. All four arms of its pre-registered ablation are public.</p></li>
 </ul>
@@ -320,25 +332,110 @@ footer{border-top:3px double var(--rule);padding:22px 0 40px;font-size:14px;colo
 <div class="year">
 <div class="year-num">2025</div>
 <ul>
-<li><time data-i18n="m11">Nov</time><p data-i18n="r25a">Started contract work as a machine learning engineer and data scientist.</p></li>
-<li><time data-i18n="m8">Aug–Sep</time><p data-i18n="r25b">Short internships at four companies, including a RAG and MCP extension for a coding assistant, a CNN that finds damage on utility poles, new features for a React web service.</p></li>
-<li><time data-i18n="m4">Apr</time><p data-i18n="r25c">Entered a master's program in a multimodal interaction lab.</p></li>
-<li><time data-i18n="m3">Mar</time><p data-i18n="r25d">Gave an English talk on magnetic-nozzle plasma acceleration at an international propulsion conference.</p></li>
+<li><time data-i18n="m11">Nov</time><p data-i18n="r25a">Started contract work at Lluminai as a machine learning engineer and data scientist.</p></li>
+<li><time data-i18n="m9">Sep</time><p data-i18n="r25b">Internships at KDDI Agile Development Center (web service features in React), NTT East (a CNN that finds damage on utility poles) and Space Engineering Development (satellite positioning group work).</p></li>
+<li><time data-i18n="m8">Aug–Sep</time><p data-i18n="r25c">About three weeks at NTT DATA Group R&amp;D: a RAG and MCP tool for developers, and automated framework version migration on Azure. One week at Kawasaki Heavy Industries solving problems in a team of six.</p></li>
+<li><time data-i18n="m4">Apr</time><p data-i18n="r25d">Entered the master's program at JAIST.</p></li>
+<li><time data-i18n="m3">Mar</time><p data-i18n="r25e">Oral talk in English, with Q&amp;A in English, at the Asian Joint Conference on Propulsion and Power (AJCPP) 2025.</p></li>
 </ul>
 </div>
 
 <div class="year">
 <div class="year-num">2024</div>
 <ul>
-<li><time data-i18n="m12">Dec</time><p data-i18n="r24a">Began a data analysis and AI internship: scraping, cleaning messy real data, charts a client could decide from. Still going.</p></li>
-<li><time data-i18n="m11">Nov</time><p data-i18n="r24b">Poster on the same nozzle research at a national space science and technology conference.</p></li>
+<li><time data-i18n="m12">Dec</time><p data-i18n="r24a">Joined Iroribi as a data science intern. Still there.</p></li>
+<li><time data-i18n="m11">Nov</time><p data-i18n="r24b">Poster at the 68th Space Sciences and Technology Conference.</p></li>
 </ul>
 </div>
 
 <div class="year">
-<div class="year-num word" data-i18n="ugYear">Undergrad</div>
+<div class="year-num word" data-i18n="ugYear">Earlier</div>
 <ul>
-<li><time></time><p data-i18n="rUg">Aeronautical systems engineering. Received the university president's award every semester.</p></li>
+<li><time data-i18n="m2023">2023</time><p data-i18n="rE1">TOEIC Listening &amp; Reading 555 (Jun).</p></li>
+<li><time data-i18n="m2021">2021</time><p data-i18n="rE2">Hazardous Materials Engineer, Class B-4 (Sep). Part-time jobs from 2021 to 2025.</p></li>
+<li><time data-i18n="m2020">2020</time><p data-i18n="rE3">Driver's license (Jun).</p></li>
+</ul>
+</div>
+</section>
+
+<!-- WORK -->
+<section id="work">
+<h2 data-i18n="workH">Work</h2>
+<p class="h2-note" data-i18n="workNote">Jobs and internships, with what I actually did.</p>
+
+<div class="item">
+<div>
+<p class="when" data-i18n="w1When">Nov 2025 to now, contract</p>
+<h3 data-i18n="w1T">Lluminai</h3>
+<p data-i18n="w1R">Machine learning engineer, data scientist</p>
+</div>
+<ul>
+<li data-i18n="w1a">Built a document-drafting setup with generative AI. Automated routine work so that a person only does the final check.</li>
+<li data-i18n="w1b">Designed data handling with care for personal information.</li>
+<li data-i18n="w1c">Status reports and improvement proposals at regular meetings. Technical blog posts.</li>
+<li data-i18n="w1d">Python, Git and GitHub, Claude Code, Google Workspace.</li>
+</ul>
+</div>
+
+<div class="item">
+<div>
+<p class="when" data-i18n="w2When">Dec 2024 to now, intern</p>
+<h3 data-i18n="w2T">Iroribi</h3>
+<p data-i18n="w2R">Data scientist (data analysis, AI development)</p>
+</div>
+<ul>
+<li data-i18n="w2a">Analysis projects for client companies: scraped web data with Python, then analyzed and charted it in Tableau and code.</li>
+<li data-i18n="w2b">The real data was full of gaps and outliers, so I rebuilt the preprocessing and changed how the data was collected and analyzed. The result was charts the client could make decisions from.</li>
+<li data-i18n="w2c">Refactored existing code and added functions to make it easier to maintain. LLM workflows with LangChain, Dify, n8n and vLLM.</li>
+<li data-i18n="w2d">Python (pandas, NumPy), BeautifulSoup, Selenium, Tableau.</li>
+</ul>
+</div>
+
+<div class="item">
+<div>
+<p class="when" data-i18n="w3When">Aug 25 to Sep 12, 2025, about 3 weeks</p>
+<h3 data-i18n="w3T">NTT DATA Group, R&amp;D</h3>
+<p data-i18n="w3R">Internship: generative AI for developers</p>
+</div>
+<ul>
+<li data-i18n="w3a">Built an extension for GitHub Copilot that uses RAG and an MCP server.</li>
+<li data-i18n="w3b">Automated a version migration of the TERASOLUNA framework, on Azure, and checked the results with LLM-based evaluation.</li>
+</ul>
+</div>
+
+<div class="item">
+<div>
+<p class="when" data-i18n="w4When">Sep 16 to 18, 2025</p>
+<h3 data-i18n="w4T">NTT East</h3>
+<p data-i18n="w4R">Internship: data scientist</p>
+</div>
+<ul>
+<li data-i18n="w4a">In a few days, built an AI that finds damage on utility poles from images (object detection and classification).</li>
+<li data-i18n="w4b">Led the CNN model development and accuracy checks, then proposed a DX plan based on interviews with field staff.</li>
+</ul>
+</div>
+
+<div class="item">
+<div>
+<p class="when" data-i18n="w5When">Sep 8 to 10, 2025</p>
+<h3 data-i18n="w5T">KDDI Agile Development Center</h3>
+<p data-i18n="w5R">Internship: web engineer</p>
+</div>
+<ul>
+<li data-i18n="w5a">Improved the UI of an in-house web service and added features (anonymous chat, tag search). Designed in Figma first, then built in agile sprints.</li>
+<li data-i18n="w5b">React, TypeScript, AWS Amplify.</li>
+</ul>
+</div>
+
+<div class="item">
+<div>
+<p class="when" data-i18n="w6When">Aug and Sep 2025</p>
+<h3 data-i18n="w6T">Kawasaki Heavy Industries, Space Engineering Development</h3>
+<p data-i18n="w6R">Short internships</p>
+</div>
+<ul>
+<li data-i18n="w6a">Kawasaki Heavy Industries (Aug 18 to 22): a new problem every day in a team of six; sorting information, splitting roles, reaching an answer by discussion.</li>
+<li data-i18n="w6b">Space Engineering Development (Sep 25 to 26): lectures on the space industry and group work on satellite positioning.</li>
 </ul>
 </div>
 </section>
@@ -347,26 +444,47 @@ footer{border-top:3px double var(--rule);padding:22px 0 40px;font-size:14px;colo
 <section id="research">
 <h2 data-i18n="resH">Research</h2>
 <p class="h2-note" data-i18n="resNote">Two topics, a long way apart.</p>
+
+<p class="when" data-i18n="resNowWhen">Now: master's thesis, JAIST, Social Signal Processing and Multimodal Interaction Lab (supervisor: Prof. Shogo Okada)</p>
+<h3 data-i18n="resNowT">How do a person's instructions and actions relate to whether a dog solves a detour task?</h3>
 <div class="two">
 <div>
-<p class="when" data-i18n="resNowWhen">Now, master's program</p>
-<h3 data-i18n="resNowT">How people and dogs interact</h3>
-<p data-i18n="resNowD">I read videos of people and dogs closely, frame by frame, to see what each one does and what changes over time. The order I work in:</p>
+<p data-i18n="resNowD">Most work on estimating a dog's state watches only the dog. The voice, gaze and movement of the person next to it are rarely measured. So I built a setup that measures the dog and the person at the same time.</p>
+<p data-i18n="resNowD2">With Purdue University's College of Veterinary Medicine, we ran a V-shaped fence detour task: 30 dogs and 40 people meeting them for the first time, 64 sessions, 192 trials. Trial 1 the dog tries alone; before trials 2 and 3 the person shows the way. The project is called CRONOS.</p>
+<p class="status" data-i18n="resStatus">Of the 36 sessions where the dog failed trial 1, 13 (36%) succeeded after the demonstration. Dogs that succeeded tended to move away from the person; distance and position features remain as exploratory candidates.</p>
+</div>
 <ol class="steps">
-<li><span data-i18n="st1"><b>Watch</b> the videos closely.</span></li>
-<li><span data-i18n="st2"><b>Label</b> behavior frame by frame in ELAN.</span></li>
-<li><span data-i18n="st3"><b>Cluster</b> the labels into recurring states.</span></li>
-<li><span data-i18n="st4"><b>Trace</b> how one state turns into the next.</span></li>
+<li><span data-i18n="st1"><b>Measure.</b> Wearable sensors on dog and person (IMU, ECG, skin conductance), three room cameras and four microphone channels, all synchronized.</span></li>
+<li><span data-i18n="st2"><b>Extract.</b> About 170,000 features per trial from 9 streams: dog 2D and 3D pose, IMU, ECG, human 3D pose, physiology, audio, cross-modal coupling, and the interaction timeline. ID swaps in human pose tracking fixed by hand; behavior annotated in ELAN.</span></li>
+<li><span data-i18n="st3"><b>Compare.</b> Successful trials are short, so trial length is controlled for: Mann–Whitney U, FDR, Cliff's delta, partial rank correlation on length-residualized values, permutation tests.</span></li>
+<li><span data-i18n="st4"><b>Model.</b> K-Means state sequences, temporal-order rules, hidden Markov models, and a machine-learning classifier for success.</span></li>
 </ol>
-<p class="status" data-i18n="resStatus">Step 2 finished on 13 Nov 2026. Clustering is next.</p>
 </div>
-<div id="before">
-<p class="when" data-i18n="resBeforeWhen">Before, undergraduate</p>
-<h3 data-i18n="resBeforeT">A magnetic nozzle for a laser-fusion rocket</h3>
-<p data-i18n="resBeforeD">A laser-fusion rocket makes very hot plasma. A magnetic field can push it out the back without the plasma touching the walls. I tested whether magnetohydrodynamic (MHD) acceleration works for this, by simulation: CFD software for the flow, Python (NumPy, Matplotlib) for the analysis and plots.</p>
-<p data-i18n="resBeforeP">Shown twice: a poster at a national space conference (Nov 2024) and an English talk at an international propulsion conference (Mar 2025).</p>
+<p class="tools" data-i18n="resTools">Python, Docker, ViTPose and RTMW3D pose estimation, ELAN, statistical testing, a GPU server with Slurm, LaTeX that pulls every number in the thesis and slides from the data.</p>
+
+<div id="before" class="before">
+<p class="when" data-i18n="resBeforeWhen">Before: undergraduate, Kanazawa Institute of Technology, Moriai Lab</p>
+<h3 data-i18n="resBeforeT">MHD analysis of acceleration and control by a magnetic nozzle in a laser-fusion rocket engine</h3>
+<p data-i18n="resBeforeD">A laser-fusion rocket makes very hot plasma. A magnetic nozzle can push it out the back without the plasma touching the walls. I tested by simulation whether magnetohydrodynamic (MHD) acceleration works for this: CFD software for the flow, Python (NumPy, Matplotlib) for the analysis and plots.</p>
+<ul class="pubs">
+<li data-i18n="pub1">Nov 2024. 68th Space Sciences and Technology Conference, poster: “A study on numerical analysis methods for plasma acceleration and control by magnetic nozzles”.</li>
+<li data-i18n="pub2">Mar 2025. AJCPP 2025, oral, in English: “Numerical analysis method for plasma acceleration and control by magnetic nozzles”.</li>
+</ul>
 </div>
-</div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+<h2 data-i18n="skH">Skills</h2>
+<p class="h2-note" data-i18n="skNote">Years are how long I've used it. Marked “at work” if I used it in a job or internship.</p>
+<dl class="skills">
+<div><dt data-i18n="skLangT">Languages</dt><dd data-i18n="skLang">Python (5 years, at work). HTML and CSS (2 years). JavaScript (half a year). React and TypeScript (internship). MATLAB (1 year, undergrad numerics). Java, C, C++ (half a year each). SQL, PHP (basics).</dd></div>
+<div><dt data-i18n="skMlT">Machine learning</dt><dd data-i18n="skMl">PyTorch, Hugging Face Transformers, scikit-learn, LightGBM. CNN, RNN, Transformer (research and internships). Pose estimation from multi-view video (ViTPose, RTMW3D). Statistics: nonparametric and permutation tests, multiple-comparison correction, HMM.</dd></div>
+<div><dt data-i18n="skDataT">Data</dt><dd data-i18n="skData">pandas, NumPy, Polars, DuckDB (at work). Scraping with BeautifulSoup, Selenium, Playwright (at work). ELAN annotation. Tableau (1 year).</dd></div>
+<div><dt data-i18n="skAiT">Generative AI</dt><dd data-i18n="skAi">RAG, MCP servers, LLM-based evaluation (internship). LangChain, Dify, n8n, vLLM (at work). Claude Code and Codex with MCP, splitting research, coding and review across several agents (at work).</dd></div>
+<div><dt data-i18n="skEnvT">Environment</dt><dd data-i18n="skEnv">Docker (2 years, at work). Linux, WSL2, PowerShell. Git and GitHub: issues, branches, pull requests, Actions, Codespaces. GPU servers with Slurm, Kaggle notebooks. LaTeX (Beamer, TikZ). Figma.</dd></div>
+<div><dt data-i18n="skCloudT">Cloud and payments</dt><dd data-i18n="skCloud">Azure (RAG in an internship). AWS Amplify, Google Cloud. Cloudflare Workers and GitHub Pages for my apps. Stripe in production, with signed license keys. Hugging Face Hub.</dd></div>
+</dl>
 </section>
 
 <!-- MADE -->
@@ -454,7 +572,7 @@ footer{border-top:3px double var(--rule);padding:22px 0 40px;font-size:14px;colo
 <h2 data-i18n="nowH">Now</h2>
 <ul class="now">
 <li data-i18n="now1">Writing <a href="https://note.com/nebourocket/n/n1a06cc1fa1f7" target="_blank" rel="noopener">Daily News</a> every morning (space, medicine, AI, data engineering, psychology, finance, world news, celebrity news, gadgets, new books, beauty), plus one long paid deep dive a day.</li>
-<li data-i18n="now2">Clustering the labeled human–dog videos.</li>
+<li data-i18n="now2">Writing my master's thesis.</li>
 <li data-i18n="now3">Writing the advanced chapters of the data engineering book.</li>
 <li data-i18n="now4">Using OpenClaw to automate chores, including a setup that keeps me off social media.</li>
 <li data-i18n="now5">Members-only posts 2–3 times a week in the note membership “Nebourocket's Creative Room” (¥500/month): research notes, book drafts, dev logs. <a href="https://note.com/nebourocket/membership" target="_blank" rel="noopener">Membership</a></li>
@@ -488,14 +606,8 @@ footer{border-top:3px double var(--rule);padding:22px 0 40px;font-size:14px;colo
 var T = { ja: {
   title: "寝坊ロケット",
   logo: "寝坊ロケット",
-  navRecord: "やってきたこと", navResearch: "研究", navMade: "作ったもの", navWriting: "書いたもの", navNow: "いま", navLinks: "リンク",
-  h1: "寝坊ロケット", altName: "Nebourocket",
-  intro: "大学院の修士課程にいます。学部ではロケットエンジンの磁気ノズルの中のプラズマを、数値計算で調べていました。いまは人と犬のやりとりを、動画から調べています。研究のかたわら、小さなWebアプリを作り、noteに文章を書いています。",
-  fNowT: "いま", fNowD: "修士課程。人と犬のインタラクション解析（1コマずつのラベル付け、クラスタリング、状態遷移）。",
-  fBeforeT: "学部", fBeforeD: "航空システム工学科。磁気ノズルのMHD数値解析で、ポスター発表1回、英語の口頭発表1回。",
-  fMadeT: "作った", fMadeD: "Webアプリ2つ、ゼロから学習した1.2億パラメータの言語モデル、データエンジニアリングの本（執筆中）。",
-  fWorkT: "仕事", fWorkD: "2024年12月からデータ分析のインターン。2025年11月から業務委託の機械学習エンジニア。",
-  satTitle: "人工衛星 NR-1 の図。部品ごとに、このページの項目へリンクしています。",
+    h1: "寝坊ロケット", altName: "Nebourocket",
+            satTitle: "人工衛星 NR-1 の図。部品ごとに、このページの項目へリンクしています。",
   sWing: "太陽電池パドル", sWingSub: "作ったもの",
   sBody: "本体", sBodySub: "やってきたこと",
   sAnt: "アンテナ", sAntSub: "noteで書いたもの",
@@ -505,30 +617,78 @@ var T = { ja: {
   sScale: "2026年　縮尺なし",
   lgBody: "本体: やってきたこと", lgCam: "カメラ: 研究", lgNoz: "ノズル: 学部の研究", lgWing: "パドル: 作ったもの", lgAnt: "アンテナ: 書いたもの", lgBeacon: "ビーコン: いま",
   satCap: "わたしの人工衛星 NR-1。部品を押すと、その項目へ移動します。",
+                                              navRecord: "やってきたこと", navWork: "経歴", navResearch: "研究", navSkills: "スキル", navMade: "作ったもの", navWriting: "書いたもの", navNow: "いま", navLinks: "リンク",
+  intro: "北陸先端科学技術大学院大学（JAIST）の修士課程にいます。学部では、レーザー核融合ロケットエンジンの磁気ノズルの中のプラズマを数値計算で調べていました。いまはパデュー大学獣医学部と共同で、人と犬を同時に計測し、人の指示と行動が犬の課題の成否とどう関わるかを研究しています。業務委託の機械学習エンジニアとして働き、Webアプリを作り、noteに文章を書いています。",
+  fNowT: "いま", fNowD: "北陸先端科学技術大学院大学（JAIST）修士課程、社会的信号処理・マルチモーダルインタラクション研究室。",
+  fBeforeT: "学部", fBeforeD: "金沢工業大学 航空システム工学科。毎学期 学長褒章、GPA 約3.60。英語の国際学会 AJCPP 2025 で口頭発表。",
+  fWorkT: "仕事", fWorkD: "ルミナイ株式会社で業務委託の機械学習エンジニア（2025年11月〜）。株式会社Iroribiでデータサイエンティストのインターン（2024年12月〜）。2025年に NTTデータグループ、KDDIアジャイル開発センター、NTT東日本などでインターン。",
+  fMadeT: "作った", fMadeD: "Webアプリ2つ（1つはStripeでProを販売）、ゼロから学習した1.2億パラメータの言語モデル、公開中のデータエンジニアリングの本（応用編は執筆中）。",
   recH: "やってきたこと", recNote: "新しい順です。",
-  m3: "3月", m4: "4月", m8: "8〜9月", m10: "10月", m11: "11月", m12: "12月",
+  m3: "3月", m4: "4月", m8: "8〜9月", m9: "9月", m10: "10月", m11: "11月", m12: "12月", m2020: "2020", m2021: "2021", m2023: "2023",
   r26a: "<a href=\"https://nebourocket.github.io/data-engineering-book/\" target=\"_blank\" rel=\"noopener\">データエンジニアリングの本</a>を書き始めました。基礎編16章は無料、応用編12章は500円。",
   r26b: "<a href=\"https://nebourocket.github.io/exercise-search/\" target=\"_blank\" rel=\"noopener\">筋トレ種目サーチ</a>を公開。1,781種目、体の図から探せて、3言語に対応。",
   r26c: "<a href=\"https://nebourocket.github.io/pfc-calculator/\" target=\"_blank\" rel=\"noopener\">PFCかんたん計算ツール</a>を作り直し、Pro（買い切り500円）の販売を始めました。決済はStripe、ライセンスは署名付きキー。",
-  r26d: "人と犬の動画のELANでのラベル付けが終わり（11月13日）、研究室の定例で研究を発表しました。",
+  r26d: "修士研究のELANでの行動アノテーションが終わり（11月13日）、研究室の定例で研究を発表しました。",
   r26e: "noteのデイリーニュースを、毎朝11テーマ・各10件ほどの形に変えました。",
   r26f: "日本語と英語の言語モデル <a href=\"https://huggingface.co/LoNebula/Nebula-1-preview\" target=\"_blank\" rel=\"noopener\">Nebula-1-preview</a> を公開。約1.2億パラメータ、約20億トークンでゼロから学習しました。事前に決めた比較実験の4本すべてを公開しています。",
-  r25a: "業務委託で、機械学習エンジニア・データサイエンティストの仕事を始めました。",
-  r25b: "4社の短期インターンに参加。RAGとMCPを使ったコーディング支援の拡張、電柱の損傷を見つけるCNN、ReactのWebサービスの機能追加などをしました。",
-  r25c: "大学院の修士課程に入学。マルチモーダル・インタラクションの研究室です。",
-  r25d: "磁気ノズルによるプラズマ加速について、国際的な推進工学の学会で英語の口頭発表をしました。",
-  r24a: "データ分析・AI開発のインターンを始めました。スクレイピング、欠損の多い実データの前処理、クライアントが判断に使える可視化。いまも続けています。",
-  r24b: "同じ磁気ノズルの研究を、国内の宇宙科学技術の講演会でポスター発表しました。",
-  ugYear: "学部",
-  rUg: "航空システム工学科。在学中は毎学期、学長褒章をいただきました。",
+  r25a: "ルミナイ株式会社で、業務委託の機械学習エンジニア・データサイエンティストとして働き始めました。",
+  r25b: "KDDIアジャイル開発センター（ReactでのWebサービスの機能追加）、NTT東日本（電柱の損傷を見つけるCNN）、宇宙技術開発（衛星測位のグループワーク）のインターンに参加。",
+  r25c: "NTTデータグループのR&amp;Dで約3週間、RAGとMCPを使った開発支援ツールと、Azure上でのフレームワークのバージョン移行の自動化に取り組みました。川崎重工業では1週間、6人のチームで課題解決をしました。",
+  r25d: "北陸先端科学技術大学院大学（JAIST）の修士課程に入学。",
+  r25e: "推進工学の国際学会 AJCPP 2025 で、英語で口頭発表しました。質疑応答も英語です。",
+  r24a: "株式会社Iroribiで、データサイエンティストのインターンを始めました。いまも続けています。",
+  r24b: "第68回宇宙科学技術連合講演会でポスター発表。",
+  ugYear: "それ以前",
+  rE1: "TOEIC Listening &amp; Reading 555点（6月）。",
+  rE2: "危険物取扱者 乙種第4類（9月）。2021年から2025年まではアルバイトも。",
+  rE3: "普通自動車第一種運転免許（6月）。",
+  workH: "経歴", workNote: "仕事とインターン。実際にやったことを書いています。",
+  w1When: "2025年11月〜現在、業務委託", w1T: "ルミナイ株式会社", w1R: "機械学習エンジニア・データサイエンティスト",
+  w1a: "生成AIを使った文書作成支援の仕組みを作りました。定型作業を自動化し、最後の確認だけを人が行う運用にしています。",
+  w1b: "個人情報に配慮したデータ管理の運用を設計しました。",
+  w1c: "稼働状況の報告と、定例ミーティングでの改善提案。技術記事の執筆。",
+  w1d: "Python、Git・GitHub、Claude Code、Google Workspace。",
+  w2When: "2024年12月〜現在、インターン", w2T: "株式会社Iroribi", w2R: "データサイエンティスト（データ分析・AI開発）",
+  w2a: "企業から依頼されたデータ分析のプロジェクト。Web上のデータをPythonでスクレイピングし、Tableauとコードで分析・可視化しました。",
+  w2b: "実データは欠損や異常値だらけだったので、前処理の流れを作り直し、データの取り方と分析の設計を見直しました。クライアントが判断に使える可視化を提案しています。",
+  w2c: "既存コードの改修と新しい関数の実装で、保守しやすくしました。LangChain・Dify・n8n・vLLMでLLMを組み込んだ業務の効率化も。",
+  w2d: "Python（pandas、NumPy）、BeautifulSoup、Selenium、Tableau。",
+  w3When: "2025年8月25日〜9月12日（約3週間）", w3T: "株式会社NTTデータグループ（R&amp;D）", w3R: "インターン：生成AIによる開発支援",
+  w3a: "RAGとMCPサーバーを使って、GitHub Copilotの拡張機能を作りました。",
+  w3b: "TERASOLUNAフレームワークのバージョン移行をAzure上で自動化し、LLMによる評価で結果を確かめました。",
+  w4When: "2025年9月16日〜18日", w4T: "NTT東日本株式会社", w4R: "インターン：データサイエンティスト",
+  w4a: "電柱の損傷を画像から見つけるAI（物体検出と画像分類）を、短期間でチームで作りました。",
+  w4b: "CNNモデルの開発と精度の検証を主導し、現場へのヒアリングをもとにDXの提案をしました。",
+  w5When: "2025年9月8日〜10日", w5T: "KDDIアジャイル開発センター株式会社", w5R: "インターン：Webエンジニア",
+  w5a: "自社Webサービスの画面を改善し、機能（匿名チャット、タグ検索）を追加しました。Figmaで設計を考えてから、アジャイルで実装しています。",
+  w5b: "React、TypeScript、AWS Amplify。",
+  w6When: "2025年8月・9月", w6T: "川崎重工業株式会社、宇宙技術開発株式会社", w6R: "短期インターン",
+  w6a: "川崎重工業（8月18日〜22日）：6人のチームで、日替わりの課題に取り組みました。情報を整理し、役割を分け、議論で答えを出します。",
+  w6b: "宇宙技術開発（9月25日〜26日）：宇宙産業の講義と、衛星測位を題材にしたグループワーク。",
   resH: "研究", resNote: "かなり離れた、2つのテーマです。",
-  resNowWhen: "いま（修士課程）", resNowT: "人と犬は、どうやりとりしているか",
-  resNowD: "人と犬が関わる動画を1コマずつじっくり読み、それぞれが何をしていて、時間とともに何が変わるかを見ます。進め方はこの順番です。",
-  st1: "<b>見る</b>。動画をじっくり見ます。", st2: "<b>ラベルを付ける</b>。ELANで1コマずつ行動に印を付けます。", st3: "<b>まとめる</b>。ラベルをクラスタリングして、くり返し出てくる状態を見つけます。", st4: "<b>たどる</b>。ある状態が次にどの状態へ移るかを追います。",
-  resStatus: "2026年11月13日に2つ目まで終わりました。次はクラスタリングです。",
-  resBeforeWhen: "前（学部）", resBeforeT: "レーザー核融合ロケットの磁気ノズル",
-  resBeforeD: "レーザー核融合ロケットは、とても熱いプラズマを作ります。壁に触れさせずに後ろへ押し出すには、磁場を使います。そこで磁気流体力学（MHD）による加速が使えるかを、数値計算で確かめました。流れの計算はCFDソフト、解析と図はPython（NumPy、Matplotlib）です。",
-  resBeforeP: "発表は2回。国内の宇宙の講演会でポスター（2024年11月）、国際的な推進工学の学会で英語の口頭発表（2025年3月）。",
+  resNowWhen: "いま：修士論文、北陸先端科学技術大学院大学 社会的信号処理・マルチモーダルインタラクション研究室（主指導教員：岡田将吾）",
+  resNowT: "人の指示と行動は、犬の迂回課題の成否とどう関連するか",
+  resNowD: "犬の状態を推定する研究の多くは、犬だけを見ています。そばにいる人の声・視線・動きは、ほとんど計測されていません。そこで、課題に取り組む犬と人を同時に計測する仕組みを作りました。",
+  resNowD2: "パデュー大学獣医学部と共同で、V字フェンスの迂回課題を行いました。犬30頭と、初対面の参加者40名、64セッション・192試行です。試行1は犬が一人で挑み、試行2・3の前に人がお手本を見せます。研究プロジェクトの名前はCRONOSです。",
+  resStatus: "試行1で失敗した36セッションのうち13（36%）が、お手本のあとに成功しました。成功した犬は参加者から離れて動く傾向があり、犬と参加者の距離や位置関係の特徴量が、探索的な候補として残りました。",
+  st1: "<b>計測。</b>犬と人のウェアラブルセンサー（IMU・心電図・皮膚電気活動）、部屋のカメラ3台、マイク4系統を同期して記録します。",
+  st2: "<b>抽出。</b>犬の2D・3D姿勢、IMU、心電図、人の3D姿勢、生理信号、音声、犬と人のクロスモーダルな連動、相互作用の時系列の9系統から、試行ごとに約17万の特徴量。人の姿勢追跡のIDの入れ替わりは手で直し、行動はELANで注釈しました。",
+  st3: "<b>比較。</b>成功した試行は短いので、試行の長さの影響を取り除いて比べます。Mann-Whitney U検定、FDR、Cliffのδ、試行長で残差化した偏順位相関、置換検定。",
+  st4: "<b>モデル化。</b>K-Meansによる状態の列、時間順序の規則、隠れマルコフモデル、機械学習による成否判定。",
+  resTools: "Python、Docker、ViTPose・RTMW3Dによる姿勢推定、ELAN、統計検定、SlurmのGPUサーバー、数値をすべてデータから読み込むLaTeX（修論と発表スライド）。",
+  resBeforeWhen: "前：学部、金沢工業大学 森合秀樹研究室",
+  resBeforeT: "レーザー核融合ロケットエンジンの磁気ノズルによる加速と制御のMHD解析",
+  resBeforeD: "レーザー核融合ロケットは、とても熱いプラズマを作ります。壁に触れさせずに後ろへ押し出すのが磁気ノズルです。磁気流体力学（MHD）による加速が使えるかを、数値計算で確かめました。流れの計算はCFDソフト、解析と図はPython（NumPy、Matplotlib）です。",
+  pub1: "2024年11月　第68回宇宙科学技術連合講演会（ポスター）「磁気ノズルによるプラズマ加速と制御の数値解析手法に関する研究」",
+  pub2: "2025年3月　AJCPP 2025（英語の口頭発表）“Numerical analysis method for plasma acceleration and control by magnetic nozzles”",
+  skH: "スキル", skNote: "かっこの中は使った期間です。「業務」は仕事かインターンで使ったものです。",
+  skLangT: "言語", skLang: "Python（5年、業務）。HTML・CSS（2年）。JavaScript（半年）。React・TypeScript（インターン）。MATLAB（1年、学部の数値解析）。Java・C・C++（各半年）。SQL・PHP（基本）。",
+  skMlT: "機械学習", skMl: "PyTorch、Hugging Face Transformers、scikit-learn、LightGBM。CNN・RNN・Transformer（研究・インターン）。多視点動画からの姿勢推定（ViTPose、RTMW3D）。統計：ノンパラメトリック検定、置換検定、多重比較の補正、HMM。",
+  skDataT: "データ", skData: "pandas、NumPy、Polars、DuckDB（業務）。BeautifulSoup・Selenium・Playwrightでのスクレイピング（業務）。ELANでのアノテーション。Tableau（1年）。",
+  skAiT: "生成AI", skAi: "RAG、MCPサーバー、LLMによる評価（インターン）。LangChain、Dify、n8n、vLLM（業務）。Claude Code・CodexとMCPで、調査・実装・レビューを複数のエージェントに分担させる開発（業務）。",
+  skEnvT: "環境", skEnv: "Docker（2年、業務）。Linux、WSL2、PowerShell。Git・GitHub（Issue、ブランチ、プルリクエスト、Actions、Codespaces）。SlurmのGPUサーバー、Kaggle Notebooks。LaTeX（Beamer、TikZ）。Figma。",
+  skCloudT: "クラウド・決済", skCloud: "Azure（インターンでRAGを構築）。AWS Amplify、Google Cloud。自作アプリにCloudflare WorkersとGitHub Pages。Stripeを本番で運用（署名付きライセンスキー）。Hugging Face Hub。",
+  now2: "修士論文を書いています。",
   madeH: "作ったもの", madeNote: "アプリは無料・登録なしで使え、記録はあなたの端末の中だけに残ります。PFCかんたん計算ツールには、有料のProもあります。",
   pfcT: "PFCかんたん計算ツール", pfcPrice: "Pro 500円",
   pfcD: "食品を選んでグラム数を入れると、今日のカロリーとたんぱく質・脂質・炭水化物が、目標と並べて出ます。",
@@ -558,8 +718,7 @@ var T = { ja: {
   allNote: "noteの記事をすべて見る",
   nowH: "いま",
   now1: "毎朝<a href=\"https://note.com/nebourocket/n/n1a06cc1fa1f7\" target=\"_blank\" rel=\"noopener\">デイリーニュース</a>を書いています（宇宙、医療、AI、データエンジニアリング、心理学、金融、世界情勢、芸能、ガジェット、新刊、美容）。それと、長めの有料の深掘りを1日1本。",
-  now2: "ラベルを付け終えた人と犬の動画を、クラスタリングしています。",
-  now3: "データエンジニアリングの本の、応用編を書いています。",
+    now3: "データエンジニアリングの本の、応用編を書いています。",
   now4: "OpenClawで身の回りの作業を自動化しています。SNSを開きすぎないための仕組みも。",
   now5: "noteメンバーシップ「寝坊ロケットの創作室」（月500円）で、週2〜3本、研究の裏側・本の下書き・開発の記録を書いています。<a href=\"https://note.com/nebourocket/membership\" target=\"_blank\" rel=\"noopener\">メンバーシップ</a>",
   checked: "最終確認 2026年11月16日。だいたい週に1回、書き直しています。",
@@ -567,7 +726,6 @@ var T = { ja: {
   lNote: "記事とデイリーニュース", lGh: "アプリと本のコード", lHf: "モデル（LoNebula）", lZenn: "技術記事", lKaggle: "コンペとノートブック", lYt: "動画", lTh: "日々の短い投稿", lIg: "写真",
   foot: "© 2026 寝坊ロケット"
 }};
-
 var enCache = {};
 function cacheEn(){
   var els = document.querySelectorAll("[data-i18n]");
