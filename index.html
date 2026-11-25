@@ -320,7 +320,7 @@ footer{border-top:3px double var(--rule);padding:22px 0 40px;font-size:14px;colo
 <div class="year">
 <div class="year-num">2026</div>
 <ul>
-<li><time data-i18n="m11">Nov</time><p data-i18n="r26h">Published <a href="https://huggingface.co/LoNebula/Nebula-1.5-preview" target="_blank" rel="noopener">Nebula-1.5-preview</a>, a 122M-parameter Japanese and English model trained from scratch on about 8B tokens. The Japanese-heavy blend passed its pre-registered test, so it ships; both comparison arms are public.</p></li>
+<li><time data-i18n="m11">Nov</time><p data-i18n="r26h">Published <a href="https://huggingface.co/LoNebula/Nebula-1.5-preview" target="_blank" rel="noopener">Nebula-1.5-preview</a>, a 122M-parameter Japanese and English model trained from scratch on about 8B tokens. The Japanese-heavy blend passed its pre-registered test, so it ships — Japanese average 35.2, 4th of 17. The comparison arm, <a href="https://huggingface.co/LoNebula/Nebula-1.5-ablation-v15-a0ext" target="_blank" rel="noopener">Nebula-1.5-ablation-v15-a0ext</a>, is public too.</p></li>
 <li><time data-i18n="m11">Nov</time><p data-i18n="r26g">Started a daily paper catch-up on <a href="https://zenn.dev/lonebula" target="_blank" rel="noopener">Zenn</a>: one new paper, every morning.</p></li>
 <li><time data-i18n="m11">Nov</time><p data-i18n="r26a">Started writing The Data Engineering Book.</p></li>
 <li><time data-i18n="m11">Nov</time><p data-i18n="r26b">Launched <a href="https://nebourocket.github.io/exercise-search/" target="_blank" rel="noopener">Exercise Search</a>: 1,781 exercises, a body map, three languages.</p></li>
@@ -534,6 +534,18 @@ footer{border-top:3px double var(--rule);padding:22px 0 40px;font-size:14px;colo
 
 <div class="item">
 <div>
+<h3 data-i18n="nb15T">Nebula-1.5-preview</h3>
+<p data-i18n="nb15D">A small Japanese and English language model, trained from scratch — the next version of Nebula-1.</p>
+<div class="links"><a href="https://huggingface.co/LoNebula/Nebula-1.5-preview" target="_blank" rel="noopener">Hugging Face</a></div>
+</div>
+<ul>
+<li data-i18n="nb151">About 122M parameters, Llama-style decoder, 24 layers, d_model 576, vocabulary 64,000, trained on about 8B tokens — four times Nebula-1.</li>
+<li data-i18n="nb152">The Japanese-heavy blend (65% Japanese) passed its pre-registered test: Japanese average 35.2, 4th of 17, English average 32.3, so it ships. The scale-only comparison arm, <a href="https://huggingface.co/LoNebula/Nebula-1.5-ablation-v15-a0ext" target="_blank" rel="noopener">Nebula-1.5-ablation-v15-a0ext</a>, is public too.</li>
+</ul>
+</div>
+
+<div class="item">
+<div>
 <h3 data-i18n="kdT">The Data Engineering Book</h3>
 <p data-i18n="kdD">A hands-on book from zero to job-ready, published as Kindle ebooks in three volumes on 21 Nov 2026.</p>
 </div>
@@ -580,7 +592,7 @@ footer{border-top:3px double var(--rule);padding:22px 0 40px;font-size:14px;colo
 <li data-i18n="now5">Members-only posts 2–3 times a week in the note membership “Nebourocket's Creative Room” (¥500/month): research notes, book drafts, dev logs. <a href="https://note.com/nebourocket/membership" target="_blank" rel="noopener">Membership</a></li>
 <li data-i18n="now6">Reading one new paper a day and writing it up on <a href="https://zenn.dev/lonebula" target="_blank" rel="noopener">Zenn</a>, every morning since 20 Nov 2026.</li>
 </ul>
-<p class="checked" data-i18n="checked">Last checked 24 Nov 2026. I update this list about once a week.</p>
+<p class="checked" data-i18n="checked">Last checked 25 Nov 2026. I update this list about once a week.</p>
 </section>
 
 <!-- LINKS -->
@@ -628,7 +640,7 @@ var T = { ja: {
   fMadeT: "作った", fMadeD: "Webアプリ2つ（1つはStripeでProを販売）、ゼロから学習した1.2億パラメータの言語モデル、Kindleで出版したデータエンジニアリングの本（全3巻）。",
   recH: "やってきたこと", recNote: "新しい順です。",
   m3: "3月", m4: "4月", m8: "8〜9月", m9: "9月", m10: "10月", m11: "11月", m12: "12月", m2020: "2020", m2021: "2021", m2023: "2023",
-  r26h: "日本語と英語の言語モデル <a href=\"https://huggingface.co/LoNebula/Nebula-1.5-preview\" target=\"_blank\" rel=\"noopener\">Nebula-1.5-preview</a> を公開。約1.2億パラメータ、約80億トークンでゼロから学習しました。日本語多めの配合が事前に決めた検証に通り、採用されました。比較した2本のモデルも公開しています。",
+  r26h: "日本語と英語の言語モデル <a href=\"https://huggingface.co/LoNebula/Nebula-1.5-preview\" target=\"_blank\" rel=\"noopener\">Nebula-1.5-preview</a> を公開。約1.2億パラメータ、約80億トークンでゼロから学習しました。日本語多めの配合が事前に決めた検証に通り、採用されました。日本語の平均は35.2で、17本中4位。比較用のモデル <a href=\"https://huggingface.co/LoNebula/Nebula-1.5-ablation-v15-a0ext\" target=\"_blank\" rel=\"noopener\">Nebula-1.5-ablation-v15-a0ext</a> も公開しています。",
   r26g: "Zennで、毎朝1本の論文読みを始めました。",
   r26a: "データエンジニアリングの本を書き始めました。",
   r26b: "<a href=\"https://nebourocket.github.io/exercise-search/\" target=\"_blank\" rel=\"noopener\">筋トレ種目サーチ</a>を公開。1,781種目、体の図から探せて、3言語に対応。",
@@ -708,6 +720,9 @@ var T = { ja: {
   nbT: "Nebula-1-preview", nbD: "日本語と英語の小さな言語モデル。ゼロから学習しました。",
   nb1: "約1.2億パラメータ、Llama型のデコーダ24層、約20億トークンで学習。",
   nb2: "比較実験の判定ルールを学習の前に書いておきました。試したアイデアはその基準を通らなかったので、素のベースラインを出しています。誰でも確かめられるよう、比較の4本すべてを公開しています。",
+  nb15T: "Nebula-1.5-preview", nb15D: "日本語と英語の小さな言語モデル。ゼロから学習しました。Nebula-1 の次の版です。",
+  nb151: "約1.2億パラメータ、Llama型のデコーダ24層、d_model 576、語彙6.4万、約80億トークンで学習。Nebula-1 の4倍のトークン数です。",
+  nb152: "日本語多めの配合（日本語65%）が事前に決めた検証に通り、採用されました。日本語の平均は35.2で17本中4位、英語の平均は32.3。量だけを変えた比較用のモデル <a href=\"https://huggingface.co/LoNebula/Nebula-1.5-ablation-v15-a0ext\" target=\"_blank\" rel=\"noopener\">Nebula-1.5-ablation-v15-a0ext</a> も公開しています。",
   kdT: "データエンジニアの本",
   kdD: "ゼロから実務レベルまで、手を動かして学ぶ本です。Kindleの電子書籍として全3巻で出版しました（2026年11月21日）。",
   kd1: "1 準備編（全8章）：プログラミング未経験の人へ。ターミナル、Python、SQL、データの形を、手を動かして学びます。",
@@ -728,7 +743,7 @@ var T = { ja: {
   now4: "OpenClawで身の回りの作業を自動化しています。SNSを開きすぎないための仕組みも。",
   now5: "noteメンバーシップ「寝坊ロケットの創作室」（月500円）で、週2〜3本、研究の裏側・本の下書き・開発の記録を書いています。<a href=\"https://note.com/nebourocket/membership\" target=\"_blank\" rel=\"noopener\">メンバーシップ</a>",
   now6: "毎朝、最新の論文を1本読んで、<a href=\"https://zenn.dev/lonebula\" target=\"_blank\" rel=\"noopener\">Zenn</a>に解説を書いています（11月20日から）。",
-  checked: "最終確認 2026年11月24日。だいたい週に1回、書き直しています。",
+  checked: "最終確認 2026年11月25日。だいたい週に1回、書き直しています。",
   linksH: "リンク",
   lNote: "記事とデイリーニュース", lGh: "アプリと本のコード", lHf: "モデル（LoNebula）", lZenn: "技術記事", lKaggle: "コンペとノートブック", lYt: "動画", lTh: "日々の短い投稿", lIg: "写真",
   foot: "© 2026 寝坊ロケット"
